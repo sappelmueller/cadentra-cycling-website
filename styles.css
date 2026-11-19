@@ -1,0 +1,64 @@
+:root {
+  color-scheme: light;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: #17251e;
+  background: #f3f7f4;
+  line-height: 1.65;
+  --ink: #17251e;
+  --muted: #435950;
+  --border: #c5d3cb;
+  --link: #095339;
+  --width: 64rem;
+}
+* { box-sizing: border-box; }
+body { margin: 0; }
+a { color: var(--link); text-underline-offset: .19em; }
+a:hover { text-decoration-thickness: .17em; }
+:focus-visible { outline: .2rem solid #086750; outline-offset: .24rem; }
+.skip {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  z-index: 1;
+  padding: .65rem 1rem;
+  background: white;
+  color: var(--ink);
+  transform: translateY(-200%);
+}
+.skip:focus { transform: none; }
+.wrap { width: min(var(--width), calc(100% - 2.5rem)); margin-inline: auto; }
+.site-header { border-bottom: 1px solid var(--border); background: #fff; }
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  column-gap: 2rem;
+  row-gap: .5rem;
+  padding-block: .8rem;
+}
+.brand { font-weight: 760; letter-spacing: -.02em; }
+nav ul { display: flex; flex-wrap: wrap; gap: .4rem 1rem; list-style: none; margin: 0; padding: 0; }
+nav a { display: inline-block; padding: .35rem .18rem; }
+nav [aria-current="page"] { color: var(--ink); font-weight: 720; text-decoration-thickness: .15em; }
+main { padding-block: clamp(2rem, 7vw, 5rem); }
+.hero {
+  color: #f7fcf8;
+  background: #15382a;
+  border-radius: 1rem;
+  padding: clamp(1.35rem, 5.5vw, 4.25rem);
+}
+h1, h2 { line-height: 1.19; letter-spacing: -.025em; }
+h1 { font-size: clamp(2.25rem, 7vw, 4.6rem); margin: 0 0 1rem; overflow-wrap: anywhere; }
+h2 { font-size: clamp(1.25rem, 4vw, 1.7rem); margin-block: 2.25rem .6rem; }
+p, ul { margin-block: .6rem 1rem; }
+p:last-child { margin-bottom: 0; }
+.lead { font-size: clamp(1.12rem, 3vw, 1.38rem); max-width: 41rem; }
+.hero a { color: #c9f6df; }
+.hero a:focus-visible { outline-color: #c9f6df; }
+.copy { max-width: 46rem; }
+.project-copy { padding: .45rem clamp(0rem, 5.5vw, 4.25rem) 0; max-width: 53rem; }
+.policy h1 { font-size: clamp(2.05rem, 6vw, 3.65rem); }
+.meta, footer { color: var(--muted); }
+footer { border-top: 1px solid var(--border); padding-block: 1.1rem; }
+
